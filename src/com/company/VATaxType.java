@@ -1,9 +1,11 @@
 package com.company;
 
+import java.math.BigDecimal;
+
 class VATaxType extends TaxType{
     //TODO НДС, = 18%
     @Override
-    public double calculateTaxFor(double amount){
-        return amount/100*18;
+    public BigDecimal calculateTaxFor(BigDecimal amount){
+        return calculateTaxFromIntToBD(amount, 18);
     }
 }

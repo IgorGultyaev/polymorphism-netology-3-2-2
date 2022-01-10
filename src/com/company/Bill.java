@@ -1,11 +1,13 @@
 package com.company;
 
+import java.math.BigDecimal;
+
 class Bill {
-    private double amount;
+    private BigDecimal amount;
     private TaxType taxType;
     private TaxService taxService;
 
-    public Bill(double amount, TaxType taxType, TaxService taxService) {
+    public Bill(BigDecimal amount, TaxType taxType, TaxService taxService) {
         this.amount = amount;
         this.taxType = taxType;
         this.taxService = taxService;
@@ -13,8 +15,7 @@ class Bill {
 
     public void payTaxes() {
         // TODO вместо 0.0 посчитать размер налога исходя из TaxType
-        double taxAmount = taxType.calculateTaxFor(amount);
-
+        BigDecimal taxAmount = taxType.calculateTaxFor(amount);
         taxService.payOut(taxAmount);
     }
 }

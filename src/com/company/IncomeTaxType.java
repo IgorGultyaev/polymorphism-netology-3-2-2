@@ -1,9 +1,11 @@
 package com.company;
 
+import java.math.BigDecimal;
+
 class IncomeTaxType extends TaxType{
     // TODO Подоходный налог, = 13%
     @Override
-    public double calculateTaxFor (double amount){
-        return amount/100*13;
+    public BigDecimal calculateTaxFor (BigDecimal amount){
+        return calculateTaxFromIntToBD(amount, 13);
     }
 }
