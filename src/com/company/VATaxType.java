@@ -1,5 +1,9 @@
 package com.company;
 
-public class VATaxType extends TaxType{
+class VATaxType extends TaxType{
     //TODO НДС, = 18%
+    @Override
+    public double calculateTaxFor(double amount){
+        return amount/100*18;
+    }
 }

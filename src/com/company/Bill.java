@@ -13,7 +13,7 @@ class Bill {
 
     public void payTaxes() {
         // TODO вместо 0.0 посчитать размер налога исходя из TaxType
-        double taxAmount = 0.0;
+        double taxAmount = taxType.calculateTaxFor(amount);
 
         taxService.payOut(taxAmount);
     }

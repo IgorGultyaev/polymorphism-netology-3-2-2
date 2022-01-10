@@ -1,5 +1,9 @@
 package com.company;
 
-public class IncomeTaxType extends TaxType{
+class IncomeTaxType extends TaxType{
     // TODO Подоходный налог, = 13%
+    @Override
+    public double calculateTaxFor (double amount){
+        return amount/100*13;
+    }
 }
