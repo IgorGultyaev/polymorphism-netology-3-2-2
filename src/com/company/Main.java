@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         TaxService taxService = new TaxService();
+
         Bill[] payments = new Bill[] {
                 // TODO создать платежи с различным типами налогообложения
                 new Bill(new BigDecimal(5_000), new TaxType(),taxService),
@@ -19,5 +20,6 @@ public class Main {
             Bill bill = payments[i];
             bill.payTaxes();
         }
+
     }
 }
