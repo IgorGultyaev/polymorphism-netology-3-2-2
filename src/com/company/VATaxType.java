@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 class VATaxType extends TaxType {
     //TODO НДС, = 18%
     @Override
-    public BigDecimal calculateTaxFor(BigDecimal amount){
+    public BigDecimal calculateTaxFor(BigDecimal amount) {
         return calculateTaxFromIntToBD(amount, 18);
     }
 }
